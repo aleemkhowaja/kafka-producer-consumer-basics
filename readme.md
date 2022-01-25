@@ -1,14 +1,12 @@
-[![License MIT][MIT badge]][MIT]
-[![CircleCI Build][CircleCI badge]][CircleCI]
+Welcome to Spring Boot with Kafka and Docker Image
 
-## Relevant documents
+Following commands to be run in doicker
 
-- The tutorial related to this project can be found on [Codeaches Website]
+1 - Run this command for loading the docker-compose.yml file
 
-[MIT badge]: https://img.shields.io/:license-MIT%202.0-blue.svg
-[MIT]: https://opensource.org/licenses/mit-license.php
+sudo docker-compose -f docker-compose.yml up --build --force-recreate
+                        OR
 
-[Codeaches Website]: https://codeaches.com
+2 - Creating the topic in latest kafka in docker
+./kafka-topics.sh --create --topic test-topic --bootstrap-server localhost:9092 --replication-factor 1 --partitions 4
 
-[CircleCI badge]: https://circleci.com/gh/codeaches/kafka-producer-consumer-basics.svg?style=shield&circle-token=:circle-token
-[CircleCI]: https://circleci.com/gh/codeaches/kafka-producer-consumer-basics
